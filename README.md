@@ -1,2 +1,2 @@
 # server-init
-init server of centos
+11init server of centos
