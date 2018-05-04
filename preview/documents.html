@@ -1,0 +1,303 @@
+
+	    <html>
+	      <head>
+				  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	        <title>documents</title>
+					
+					<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+			
+				  <style>
+					pre {
+					    counter-reset: line-numbering;
+					    border: solid 1px #d9d9d9;
+					    border-radius: 0;
+					    background: #fff;
+					    padding: 0;
+					    line-height: 23px;
+					    margin-bottom: 30px;
+					    white-space: pre;
+					    overflow-x: auto;
+					    word-break: inherit;
+					    word-wrap: inherit;
+					}
+
+					pre a::before {
+					  content: counter(line-numbering);
+					  counter-increment: line-numbering;
+					  padding-right: 1em; /* space after numbers */
+					  width: 25px;
+					  text-align: right;
+					  opacity: 0.7;
+					  display: inline-block;
+					  color: #aaa;
+					  background: #eee;
+					  margin-right: 16px;
+					  padding: 2px 10px;
+					  font-size: 13px;
+					  -webkit-touch-callout: none;
+					  -webkit-user-select: none;
+					  -khtml-user-select: none;
+					  -moz-user-select: none;
+					  -ms-user-select: none;
+					  user-select: none;
+					}
+
+					pre a:first-of-type::before {
+					  padding-top: 10px;
+					}
+
+					pre a:last-of-type::before {
+					  padding-bottom: 10px;
+					}
+
+					pre a:only-of-type::before {
+					  padding: 10px;
+					}
+			
+					.highlight { background-color: #ffffcc } /* RIGHT */
+					</style>
+	      </head>
+	      <body>
+				  <div>
+							<div style='width:25%;'>
+									<ul id="tree" class="ztree" style='width:100%'>
+		
+									</ul>
+							</div>
+			        <div id='readme' style='width:70%;margin-left:20%;'>
+			          	<article class='markdown-body'>
+			            	<style>.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f0f0f0; }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #40a070 } /* Literal.Number.Bin */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+<h1>1.CentOS7 基础配置安装</h1>
+
+<h2>1.1 服务器的初始化安装</h2>
+
+<ul>
+<li>安装<code>net-tools</code>后方可执行<code>ifconfig</code>查看本机ip情况</li>
+</ul>
+
+<pre>
+  yum install net-tools
+</pre>
+ 
+
+<ul>
+<li>安装其他一些基本工具</li>
+</ul>
+
+<pre>
+  yum -y install sudo
+</pre>
+ 
+
+<ul>
+<li>ssh相关操作</li>
+</ul>
+
+<pre>
+  mkdir -p /root/.ssh/
+  echo ''  >> /root/.ssh/authorized_keys
+  ssh-keygen -t rsa -C "your_email@example.com"
+</pre>
+
+<h1>2. LNMP环境搭建</h1>
+
+<h2>2.1 MySQL安装</h2>
+
+<p>总所周知，MySQL 被 Oracle 收购后，CentOS 的镜像仓库中提供的默认的数据库也变为了 MariaDB</p>
+
+<ul>
+<li><p>若要删除默认MariaDB的相关安装，可执行以下命令：
+<pre>
+yum remove -y mariadb-libs
+</pre></p></li>
+<li><p>添加 MySQL YUM 源 （mysql5.7）
+<pre>
+wget &#39;https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm&#39;
+sudo rpm -Uvh mysql57-community-release-el7-11.noarch.rpm
+yum repolist all | grep mysql
+mysql-connectors-community/x86_64 MySQL Connectors Community                  36
+mysql-tools-community/x86_64      MySQL Tools Community                       47
+mysql57-community/x86_64          MySQL 5.7 Community Server                 187
+</pre></p></li>
+<li><p>如果想安装最新版本的，直接使用 yum 命令即可
+<pre>
+yum install mysql-community-server
+</pre></p></li>
+<li><p>如果想要安装 5.6 版本的，有2个方法。命令行支持 yum-config-manager 命令的话，可以使用如下命令：
+<pre>
+$ sudo dnf config-manager --disable mysql57-community
+$ sudo dnf config-manager --enable mysql56-community
+$ yum repolist | grep mysql
+mysql-connectors-community/x86_64 MySQL Connectors Community                  36
+mysql-tools-community/x86_64      MySQL Tools Community                       47
+mysql56-community/x86_64          MySQL 5.6 Community Server                 327
+</pre></p></li>
+<li><p>或者直接修改<code>/etc/yum.repos.d/mysql-community.repo</code>这个文件
+<pre>
+[mysql56-community]
+name=MySQL 5.6 Community Server
+baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/7/$basearch/
+enabled=1 #表示当前版本是安装
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+[mysql57-community]
+name=MySQL 5.7 Community Server
+baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/$basearch/
+enabled=0 #默认这个是 1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+</pre></p></li>
+<li><p>通过设置 enabled 来决定安装哪个版本， 设置好之后使用 yum 安装即可。</p></li>
+</ul>
+
+<h1>3.CentOS7 搭建ShadowSocks</h1>
+
+<p>pip是 python 的包管理工具。将使用 python 版本的 shadowsocks，此版本的 shadowsocks 已发布到 pip 上，因此我们需要通过 pip 命令来安装。</p>
+
+<pre>
+  curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+  python get-pip.py
+</pre>
+
+<ul>
+<li>安装配置 shadowsocks</li>
+</ul>
+
+<pre>
+  pip install --upgrade pip
+  pip install shadowsocks
+</pre>
+
+<ul>
+<li>安装完成后，需要创建配置文件/etc/shadowsocks.json，内容如下：
+<pre>
+{
+&quot;server&quot;: &quot;0.0.0.0&quot;,
+&quot;server_port&quot;: 8388,
+&quot;password&quot;: &quot;u1zon57jd0v869t7w&quot;,
+&quot;method&quot;: &quot;aes-256-cfb&quot;
+}
+</pre><br></li>
+</ul>
+
+<p><strong>说明</strong></p>
+
+<ul>
+<li>method为加密方法，可选<code>aes-128-cfb</code>、<code>aes-192-cfb</code>、<code>aes-256-cfb</code>、<code>bf-cfb</code>、 <code>cast5-cfb</code>、<code>des-cfb</code>、<code>rc4-md5</code>、<code>chacha20</code>、<code>salsa20</code>、<code>rc4</code>、<code>table</code></li>
+<li>server_port为服务监听端口</li>
+<li>password为密码，可使用<a href="#http://ucdok.com/project/generate_password.html">密码生成工具</a>生成一个随机密码</li>
+</ul>
+
+<p><strong>配置自动启动项</strong></p>
+
+<ul>
+<li><p>新建启动脚本文件<code>/etc/systemd/system/shadowsocks.service</code>，内容如下：
+<pre>
+[Unit]
+Description=ShadowSocks
+[Service]
+TimeoutStartSec=0
+ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
+[Install]
+WantedBy=multi-user.target
+</pre></p></li>
+<li><p>执行以下命令启动ShadowSocks服务：
+<pre>
+systemctl enable shadowsocks
+systemctl start shadowsocks
+</pre></p></li>
+<li><p>可以通过shell脚本去快速安装
+<pre>
+chmod +x install-shadowsocks.sh
+./install-shadowsocks.sh
+</pre></p></li>
+</ul>
+
+			          	</article>
+			        </div>
+					</div>
+	      </body>
+	    </html>
+			<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+			<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+			<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+      <script type="text/javascript" src="toc/toc_conf.js"></script>
+      
+			<SCRIPT type="text/javascript" >
+			<!--
+			$(document).ready(function(){
+          var css_conf = eval(markdown_panel_style);
+          $('#readme').css(css_conf)
+          
+          var conf = eval(jquery_ztree_toc_opts);
+  				$('#tree').ztree_toc(conf);
+
+				
+			});
+			//-->
+			</SCRIPT>
+	  
