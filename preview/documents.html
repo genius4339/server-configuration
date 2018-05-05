@@ -170,48 +170,68 @@
 <p>总所周知，MySQL 被 Oracle 收购后，CentOS 的镜像仓库中提供的默认的数据库也变为了 MariaDB</p>
 
 <ul>
-<li><p>若要删除默认MariaDB的相关安装，可执行以下命令：
+<li>若要删除默认MariaDB的相关安装，可执行以下命令：</li>
+</ul>
+
 <pre>
-yum remove -y mariadb-libs
-</pre></p></li>
-<li><p>添加 MySQL YUM 源 （mysql5.7）
+  yum remove -y mariadb-libs
+</pre>
+
+<ul>
+<li>添加 MySQL YUM 源 （mysql5.7）</li>
+</ul>
+
 <pre>
-wget &#39;https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm&#39;
-sudo rpm -Uvh mysql57-community-release-el7-11.noarch.rpm
-yum repolist all | grep mysql
-mysql-connectors-community/x86_64 MySQL Connectors Community                  36
-mysql-tools-community/x86_64      MySQL Tools Community                       47
-mysql57-community/x86_64          MySQL 5.7 Community Server                 187
-</pre></p></li>
-<li><p>如果想安装最新版本的，直接使用 yum 命令即可
+  wget 'https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm'
+  sudo rpm -Uvh mysql57-community-release-el7-11.noarch.rpm
+  yum repolist all | grep mysql
+  mysql-connectors-community/x86_64 MySQL Connectors Community                  36
+  mysql-tools-community/x86_64      MySQL Tools Community                       47
+  mysql57-community/x86_64          MySQL 5.7 Community Server                 187
+</pre>
+
+<ul>
+<li>如果想安装最新版本的，直接使用 yum 命令即可</li>
+</ul>
+
 <pre>
-yum install mysql-community-server
-</pre></p></li>
-<li><p>如果想要安装 5.6 版本的，有2个方法。命令行支持 yum-config-manager 命令的话，可以使用如下命令：
+  yum install mysql-community-server
+</pre>
+
+<ul>
+<li>如果想要安装 5.6 版本的，有2个方法。命令行支持 yum-config-manager 命令的话，可以使用如下命令：</li>
+</ul>
+
 <pre>
-$ sudo dnf config-manager --disable mysql57-community
-$ sudo dnf config-manager --enable mysql56-community
-$ yum repolist | grep mysql
-mysql-connectors-community/x86_64 MySQL Connectors Community                  36
-mysql-tools-community/x86_64      MySQL Tools Community                       47
-mysql56-community/x86_64          MySQL 5.6 Community Server                 327
-</pre></p></li>
-<li><p>或者直接修改<code>/etc/yum.repos.d/mysql-community.repo</code>这个文件
+  $ sudo dnf config-manager --disable mysql57-community
+  $ sudo dnf config-manager --enable mysql56-community
+  $ yum repolist | grep mysql
+  mysql-connectors-community/x86_64 MySQL Connectors Community                  36
+  mysql-tools-community/x86_64      MySQL Tools Community                       47
+  mysql56-community/x86_64          MySQL 5.6 Community Server                 327
+</pre>
+
+<ul>
+<li>或者直接修改<code>/etc/yum.repos.d/mysql-community.repo</code>这个文件</li>
+</ul>
+
 <pre>
-[mysql56-community]
-name=MySQL 5.6 Community Server
-baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/7/$basearch/
-enabled=1 #表示当前版本是安装
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
-[mysql57-community]
-name=MySQL 5.7 Community Server
-baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/$basearch/
-enabled=0 #默认这个是 1
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
-</pre></p></li>
-<li><p>通过设置 enabled 来决定安装哪个版本， 设置好之后使用 yum 安装即可。</p></li>
+  [mysql56-community]
+  name=MySQL 5.6 Community Server
+  baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/7/$basearch/
+  enabled=1 #表示当前版本是安装
+  gpgcheck=1
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+  [mysql57-community]
+  name=MySQL 5.7 Community Server
+  baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/$basearch/
+  enabled=0 #默认这个是 1
+  gpgcheck=1
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+</pre>
+
+<ul>
+<li>通过设置 enabled 来决定安装哪个版本， 设置好之后使用 yum 安装即可。</li>
 </ul>
 
 <h1>3.CentOS7 搭建ShadowSocks</h1>
@@ -233,16 +253,17 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 </pre>
 
 <ul>
-<li>安装完成后，需要创建配置文件/etc/shadowsocks.json，内容如下：
-<pre>
-{
-&quot;server&quot;: &quot;0.0.0.0&quot;,
-&quot;server_port&quot;: 8388,
-&quot;password&quot;: &quot;u1zon57jd0v869t7w&quot;,
-&quot;method&quot;: &quot;aes-256-cfb&quot;
-}
-</pre><br></li>
+<li>安装完成后，需要创建配置文件/etc/shadowsocks.json，内容如下：</li>
 </ul>
+
+<pre>
+  {
+    "server": "0.0.0.0",
+    "server_port": 8388,
+    "password": "u1zon57jd0v869t7w",
+    "method": "aes-256-cfb"
+  }
+</pre>  
 
 <p><strong>说明</strong></p>
 
@@ -255,27 +276,36 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 <p><strong>配置自动启动项</strong></p>
 
 <ul>
-<li><p>新建启动脚本文件<code>/etc/systemd/system/shadowsocks.service</code>，内容如下：
-<pre>
-[Unit]
-Description=ShadowSocks
-[Service]
-TimeoutStartSec=0
-ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
-[Install]
-WantedBy=multi-user.target
-</pre></p></li>
-<li><p>执行以下命令启动ShadowSocks服务：
-<pre>
-systemctl enable shadowsocks
-systemctl start shadowsocks
-</pre></p></li>
-<li><p>可以通过shell脚本去快速安装
-<pre>
-chmod +x install-shadowsocks.sh
-./install-shadowsocks.sh
-</pre></p></li>
+<li>新建启动脚本文件<code>/etc/systemd/system/shadowsocks.service</code>，内容如下：</li>
 </ul>
+
+<pre>
+  [Unit]
+  Description=ShadowSocks
+  [Service]
+  TimeoutStartSec=0
+  ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
+  [Install]
+  WantedBy=multi-user.target
+</pre>
+
+<ul>
+<li>执行以下命令启动ShadowSocks服务：</li>
+</ul>
+
+<pre>
+  systemctl enable shadowsocks
+  systemctl start shadowsocks
+</pre>
+
+<ul>
+<li>可以通过shell脚本去快速安装：</li>
+</ul>
+
+<pre>
+  chmod +x install-shadowsocks.sh
+  ./install-shadowsocks.sh
+</pre>
 
 			          	</article>
 			        </div>

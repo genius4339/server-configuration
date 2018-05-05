@@ -29,11 +29,13 @@
 总所周知，MySQL 被 Oracle 收购后，CentOS 的镜像仓库中提供的默认的数据库也变为了 MariaDB
 
 * 若要删除默认MariaDB的相关安装，可执行以下命令：
+
 <pre>
   yum remove -y mariadb-libs
 </pre>
 
 * 添加 MySQL YUM 源 （mysql5.7）
+
 <pre>
   wget 'https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm'
   sudo rpm -Uvh mysql57-community-release-el7-11.noarch.rpm
@@ -44,11 +46,13 @@
 </pre>
 
 * 如果想安装最新版本的，直接使用 yum 命令即可
+
 <pre>
   yum install mysql-community-server
 </pre>
 
 * 如果想要安装 5.6 版本的，有2个方法。命令行支持 yum-config-manager 命令的话，可以使用如下命令：
+
 <pre>
   $ sudo dnf config-manager --disable mysql57-community
   $ sudo dnf config-manager --enable mysql56-community
@@ -59,6 +63,7 @@
 </pre>
 
 * 或者直接修改`/etc/yum.repos.d/mysql-community.repo`这个文件
+
 <pre>
   [mysql56-community]
   name=MySQL 5.6 Community Server
@@ -95,6 +100,7 @@ pip是 python 的包管理工具。将使用 python 版本的 shadowsocks，此�
 </pre>
 
 * 安装完成后，需要创建配置文件/etc/shadowsocks.json，内容如下：
+
 <pre>
   {
     "server": "0.0.0.0",
@@ -114,6 +120,7 @@ pip是 python 的包管理工具。将使用 python 版本的 shadowsocks，此�
 **配置自动启动项**
 
 * 新建启动脚本文件`/etc/systemd/system/shadowsocks.service`，内容如下：
+
 <pre>
   [Unit]
   Description=ShadowSocks
@@ -126,12 +133,14 @@ pip是 python 的包管理工具。将使用 python 版本的 shadowsocks，此�
 
 
 * 执行以下命令启动ShadowSocks服务：
+
 <pre>
   systemctl enable shadowsocks
   systemctl start shadowsocks
 </pre>
 
-* 可以通过shell脚本去快速安装
+* 可以通过shell脚本去快速安装：
+
 <pre>
   chmod +x install-shadowsocks.sh
   ./install-shadowsocks.sh
