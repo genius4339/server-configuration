@@ -114,7 +114,7 @@ pip是 python 的包管理工具。将使用 python 版本的 shadowsocks，此�
 
 * method为加密方法，可选`aes-128-cfb`、`aes-192-cfb`、`aes-256-cfb`、`bf-cfb`、 `cast5-cfb`、`des-cfb`、`rc4-md5`、`chacha20`、`salsa20`、`rc4`、`table`
 * server_port为服务监听端口
-* password为密码，可使用[密码生成工具](#http://ucdok.com/project/generate_password.html)生成一个随机密码
+* password为密码，可使用[密码生成工具](http://ucdok.com/project/generate_password.html)生成一个随机密码
 
 
 **配置自动启动项**
