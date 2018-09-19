@@ -131,7 +131,7 @@
 .highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
 .highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
 .highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
-<h1>1.CentOS7 基础配置安装</h1>
+<h1>1.CentOS7 配置相关</h1>
 
 <h2>1.1 服务器的初始化安装</h2>
 
@@ -162,6 +162,35 @@
   echo ''  >> /root/.ssh/authorized_keys
   ssh-keygen -t rsa -C "your_email@example.com"
 </pre>
+
+<h2>1.2 重置root密码</h2>
+
+<ul>
+<li>在启动grup菜单，选择编辑选项启动</li>
+</ul>
+
+<p><img src="http://doc.az363.com/images/cent_os_reset_pwd_1.png" alt="Image text"></p>
+
+<ul>
+<li>按键盘e键，来进入编辑界面</li>
+</ul>
+
+<p><img src="http://doc.az363.com/images/cent_os_reset_pwd_2.png" alt="Image text"></p>
+
+<ul>
+<li>找到Linux 16的那一行，将ro改为rw init=/sysroot/bin/sh</li>
+</ul>
+
+<p><img src="http://doc.az363.com/images/cent_os_reset_pwd_3.png" alt="Image text"></p>
+
+<ul>
+<li><p>现在按下 Control+x ，使用单用户模式启动</p></li>
+<li><p>现在，可以使用下面的命令访问系统 chroot /sysroot</p></li>
+<li><p>重置密码 passwd root</p></li>
+<li><p>更新系统信息 touch /.autorelabel</p></li>
+<li><p>退出chroot模式 exit</p></li>
+<li><p>重启你的系统 reboot</p></li>
+</ul>
 
 <h1>2. LNMP环境搭建</h1>
 
@@ -203,9 +232,9 @@
 </ul>
 
 <pre>
-  $ sudo dnf config-manager --disable mysql57-community
-  $ sudo dnf config-manager --enable mysql56-community
-  $ yum repolist | grep mysql
+  sudo dnf config-manager --disable mysql57-community
+  sudo dnf config-manager --enable mysql56-community
+  yum repolist | grep mysql
   mysql-connectors-community/x86_64 MySQL Connectors Community                  36
   mysql-tools-community/x86_64      MySQL Tools Community                       47
   mysql56-community/x86_64          MySQL 5.6 Community Server                 327

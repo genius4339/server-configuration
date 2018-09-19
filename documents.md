@@ -1,4 +1,4 @@
-#  1.CentOS7 基础配置安装
+#  1.CentOS7 配置相关
 
 ## 1.1 服务器的初始化安装
 
@@ -21,6 +21,36 @@
   echo ''  >> /root/.ssh/authorized_keys
   ssh-keygen -t rsa -C "your_email@example.com"
 </pre>
+
+
+## 1.2 重置root密码
+
+* 在启动grup菜单，选择编辑选项启动
+
+![Image text](http://doc.az363.com/images/cent_os_reset_pwd_1.png)
+
+
+* 按键盘e键，来进入编辑界面
+
+![Image text](http://doc.az363.com/images/cent_os_reset_pwd_2.png)
+
+* 找到Linux 16的那一行，将ro改为rw init=/sysroot/bin/sh
+
+![Image text](http://doc.az363.com/images/cent_os_reset_pwd_3.png)
+
+
+* 现在按下 Control+x ，使用单用户模式启动
+
+* 现在，可以使用下面的命令访问系统 chroot /sysroot
+
+* 重置密码 passwd root
+
+* 更新系统信息 touch /.autorelabel
+
+* 退出chroot模式 exit
+
+* 重启你的系统 reboot
+
 
 # 2. LNMP环境搭建
 
@@ -146,12 +176,6 @@ pip是 python 的包管理工具。将使用 python 版本的 shadowsocks，此�
   ./install-shadowsocks.sh
 </pre>
 
-
-# 3.CentOS7 重置root密码
-
-* 在启动grup菜单，选择编辑选项启动
-
-![Image text](http://doc.az363.com/images/cent_os_reset_pwd_1.png)
 
 
 
