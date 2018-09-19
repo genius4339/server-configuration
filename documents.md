@@ -54,9 +54,9 @@
 * 如果想要安装 5.6 版本的，有2个方法。命令行支持 yum-config-manager 命令的话，可以使用如下命令：
 
 <pre>
-  $ sudo dnf config-manager --disable mysql57-community
-  $ sudo dnf config-manager --enable mysql56-community
-  $ yum repolist | grep mysql
+  sudo dnf config-manager --disable mysql57-community
+  sudo dnf config-manager --enable mysql56-community
+  yum repolist | grep mysql
   mysql-connectors-community/x86_64 MySQL Connectors Community                  36
   mysql-tools-community/x86_64      MySQL Tools Community                       47
   mysql56-community/x86_64          MySQL 5.6 Community Server                 327
@@ -145,6 +145,15 @@ pip是 python 的包管理工具。将使用 python 版本的 shadowsocks，此�
   chmod +x install-shadowsocks.sh
   ./install-shadowsocks.sh
 </pre>
+
+
+# 3.CentOS7 重置root密码
+
+* 在启动grup菜单，选择编辑选项启动
+
+![Image text](http://doc.az363.com/images/cent_os_reset_pwd_1.png)
+
+
 
 
  
